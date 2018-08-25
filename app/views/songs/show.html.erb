@@ -7,5 +7,6 @@
 <p>Artist Name: <%=@song.artist_name%></p>
 <p>Genre: <%=@song.genre%></p>
 
-
- <%= link_to 'Delete', song_path(@song), method: :delete, data: { confirm: 'For real?' } %>
+<%=form_tag song_path(@song), method: "delete" do %>
+  <%=submit_tag "Delete"%>
+<%end%>
